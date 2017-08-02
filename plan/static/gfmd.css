@@ -311,6 +311,7 @@ input[type=text] {padding:5px; border:2px solid #ccc;
 input[type=text]:focus {border-color:#333; }
 
 input[type=submit] {
+    -webkit-appearance: none;
     padding:5px 15px;
     border: 1px solid #cccccc;
     background: white;
@@ -319,7 +320,7 @@ input[type=submit] {
 }
 
 * {
-	-webkit-print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
 }
 @media screen and (min-width: 914px) {
     body {
@@ -328,10 +329,10 @@ input[type=submit] {
     }
 }
 @media print {
-	table, pre {
-		page-break-inside: avoid;
-	}
-	pre {
-		word-wrap: break-word;
-	}
+    table, pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
 }
