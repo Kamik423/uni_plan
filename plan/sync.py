@@ -191,8 +191,8 @@ def sync():
     import json
     import tqdm
     print('generating room map')
-    with open('roommap.json', 'w') as f:
-        f.write(json.dumps(room_types_and_buildings(wanted_building_ids, wanted_room_raumartids), indent = 4, ensure_ascii=False))
+    with open('roommap.json', 'wb') as f:
+        f.write(json.dumps(room_types_and_buildings(wanted_building_ids, wanted_room_raumartids), indent = 4, ensure_ascii=False).encode('utf-8'))
     rooms = room_urls_for_buildings_and_rooms(wanted_building_ids, wanted_room_raumartids)
     print('generating time table')
     t = tqdm.tqdm(total=len(rooms))
@@ -203,8 +203,8 @@ def sync():
             if not time in times:
                 times[time] = {}
             times[time][room] = plan_by_room[room][time]
-    with open('roomplan.json', 'w') as f:
-        f.write(json.dumps(times, indent = 4, ensure_ascii=False))
+    with open('roomplan.json', 'wb') as f:
+        f.write(json.dumps(times, indent = 4, ensure_ascii=False).encode('utf-8'))
     print('done')
 
 sync()

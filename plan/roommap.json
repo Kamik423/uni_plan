@@ -1,0 +1,84 @@
+{
+    "Bibl- u Seminarz": {
+        "Hörsaal": [
+            "00.108 (Helmut-Pabel-Hörsaal)"
+        ],
+        "PC-Pool": [],
+        "Praktikumsraum": [],
+        "Seminarraum": [
+            "00.101",
+            "00.102",
+            "00.103",
+            "00.106",
+            "00.107",
+            "00.202",
+            "00.204",
+            "00.209",
+            "00.211",
+            "00.212",
+            "00.214",
+            "01.101",
+            "01.102",
+            "01.104",
+            "01.105",
+            "01.106",
+            "Seminarraum SE 63.00.319"
+        ]
+    },
+    "Informatik": {
+        "Hörsaal": [
+            "Turing-HS",
+            "Zuse-HS"
+        ],
+        "PC-Pool": [],
+        "Praktikumsraum": [],
+        "Seminarraum": [
+            "Seminarraum I",
+            "Seminarraum II",
+            "Seminarraum III",
+            "Übungsraum I",
+            "Übungsraum II"
+        ]
+    },
+    "Nat.wiss. HS-Bau": {
+        "Hörsaal": [
+            "Hörsaal 2",
+            "Hörsaal 4",
+            "Hörsaal HS 1 (Max-Scheer-Hörsaal)",
+            "Hörsaal HS 3",
+            "Hörsaal HS 5"
+        ],
+        "PC-Pool": [],
+        "Praktikumsraum": [],
+        "Seminarraum": [
+            "Studierenden- und Tagungsbüro HE08"
+        ]
+    },
+    "Physik": {
+        "Hörsaal": [
+            "Hörsaal HS P"
+        ],
+        "PC-Pool": [
+            "CIP-Pool 01 Physik",
+            "CIP-Pool 02 Physik"
+        ],
+        "Praktikumsraum": [
+            "Praktikumsraum CU77",
+            "Praktikumsraum CU81",
+            "Praktikumsschule"
+        ],
+        "Seminarraum": [
+            "SE 10 (ehem. TB-Physik)",
+            "SE 8 (ehem. TB-Physik)",
+            "Seminarraum F053",
+            "Seminarraum SE 1",
+            "Seminarraum SE 2",
+            "Seminarraum SE 3",
+            "Seminarraum SE 4",
+            "Seminarraum SE 5",
+            "Seminarraum SE 6",
+            "Seminarraum SE 7",
+            "Studentische Arbeitsplätze SE 9"
+        ]
+    }
+}
