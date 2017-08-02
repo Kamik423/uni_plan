@@ -305,13 +305,14 @@ kbd {
 }
 
 input[type=text] {padding:5px; border:2px solid #ccc;
--webkit-border-radius: 5px;
+	-webkit-border-radius: 5px;
     border-radius: 5px;
 }
 input[type=text]:focus {border-color:#333; }
 
 input[type=submit] {
     -webkit-appearance: none;
+	-webkit-border-radius:0; 
     padding:5px 15px;
     border: 1px solid #cccccc;
     background: white;
