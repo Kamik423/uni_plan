@@ -183,6 +183,9 @@ table {
       margin-top: 0;}
     table tr th :last-child, table tr td :last-child {
       margin-bottom: 0}
+.now {
+  border-left: 3px solid #4183C4;
+}
 
 img {
   max-width: 100%; }

@@ -10,8 +10,11 @@ from flask import Flask, render_template, request
 DEBUG = True
 application = Flask(__name__)
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+try: # python2 compatibility
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+except:
+    pass
 
 @application.route("/", methods=['GET', 'POST'])
 def hello():
@@ -36,21 +39,21 @@ def hello():
             rooms[building] += room_map[building][room]
     weekday = min(datetime.date.today().weekday(), 4)
     times = ['vor 8', '8','9','10','11','12','13','14','15','16','17','18','19','ab  20']
+    current_time = datetime.datetime.now().hour
+    current_time = times[0] if current_time < 8 else (times[-1] if current_time > 20 else str(current_time))
     for building in rooms:
         table += '<table width="100%"><col width="140"><tr><th><strong>{}</strong></th>'.format(building)
         for time in times:
             time = time.split(' ')[-1]+'+' if 'ab ' in time else time
             time = time.replace('vor ', '<')
-            table += '<th>{}</th>'.format(time)
-        table += '<tr>'
+            # table += '<th>{}</th>'.format(time)
+            table += '<th{}>{}</th>'.format(' class="now"' if current_time == time else '', time)
         for room in rooms[building]:
             table += '<tr>'
             table += '<td><strong>{}</strong></td>'.format(room)
             for time in times:
-                if not False in [i[weekday] for i in room_plan[time][room]]: #TODO mehr als nur [0]
-                    table += '<td class="free"></td>'
-                else:
-                    table += '<td class="taken"></td>'
+                free = not False in [i[weekday] for i in room_plan[time][room]]
+                table += '<td class="{}{}">'.format('free' if free else 'taken', ' now' if current_time == time else '')
             table += '</tr>'
         table += '</table>'
 
