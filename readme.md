@@ -4,7 +4,7 @@
 
 Built for a better viewing experience of the [University of Würzburg](https://www.uni-wuerzburg.de) room plans.
 
-The plan is currently hosted at [plan.thunderray-studios.de](plan.thunderray-studios.de).
+The plan is currently hosted at [plan.thunderray-studios.de](http://plan.thunderray-studios.de).
 
 The project was built to run on CentOS 7.0 with Nginx, Python 3.6, Flask and uWSGI, but can probably easily be adjusted to work on other plattforms with other universities and organisations.
 
