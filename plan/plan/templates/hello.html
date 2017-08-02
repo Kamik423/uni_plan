@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/gfmd.css">
+    <title>Raumplan</title>
+</head>
+<body>
+<form action="" method="get">
+    <center>
+        <h1>Raumplan Universität Würzburg<br>-{{ weekday }}-</h1>
+        <table width="100%">
+            <tr>
+                <th>
+                    <h1>Gebäude</h1></th>
+                <th><h1>Raumart</h1></th>
+            </tr><tr><td>
+            {% for building in buildings %}
+            <input type="checkbox" name="building" value="{{ building }}" {{ 'checked="checked"' if buildings[building] }}>{{ building }}<br>
+            {% endfor %}
+        </td><td>
+
+            {% for room_type in room_types %}
+            <input type="checkbox" name="room_type" value="{{ room_type }}" {{ 'checked="checked"' if room_types[room_type] }}>{{ room_type }}<br>
+            {% endfor %}
+        </td>
+        </tr>
+            </div>
+        </table>
+        <div class="input submit">
+            <input type="submit" value="Suchen" />
+        </div>
+        {{ table|safe }}
+        <table width="100%">
+            <tr>
+                <td><center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/50px-Python-logo-notext.svg.png"></center></td>
+                <td><center><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CHWK5R36SXZ2L"><img src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_donate_92x26.png" alt="Donate"></a></center></td>
+                <td><center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/100px-Flask_logo.svg.png"></center></td>
+            </tr>
+        </table>
+        created by <a href="mailto:hans.schuelein@stud-mail.uni-wuerzburg.de">Hans Schülein</a> on a thursday
+    </center>
+</form>
+</body>

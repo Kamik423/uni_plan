@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve plan
+After=network.target
+
+[Service]
+User=hans
+Group=nginx
+WorkingDirectory=/home/hans/plan
+Environment="PATH=/home/hans/plan/plan/bin"
+ExecStart=/usr/bin/uwsgi --ini /home/hans/plan/plan.ini
+
+[Install]
+WantedBy=multi-user.target
