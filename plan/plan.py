@@ -27,7 +27,7 @@ def hello():
         room_map = json.loads(f.read())
     with open('roomplan.json', 'r') as f:
         room_plan = json.loads(f.read())
-    if len(args) == 0:
+    if len(args) == 0 or 'building' not in args or 'room_type' not in args:
         args['building'] = room_map.keys()
         args['room_type'] = room_map[list(room_map.keys())[0]].keys()
     rooms = {}
